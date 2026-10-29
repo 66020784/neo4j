@@ -1,0 +1,592 @@
+{
+  "version": "3.0.0",
+  "visualisation": {
+    "nodes": [
+      {
+        "id": "n:1",
+        "position": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "id": "n:2",
+        "position": {
+          "x": 152.50520833333331,
+          "y": 54.307291666666664
+        }
+      },
+      {
+        "id": "n:3",
+        "position": {
+          "x": -36.296875000000014,
+          "y": 127.22395833333334
+        }
+      },
+      {
+        "id": "n:4",
+        "position": {
+          "x": 86.74999999999999,
+          "y": -116.26562499999999
+        }
+      },
+      {
+        "id": "n:5",
+        "position": {
+          "x": -92.9375,
+          "y": -161.1875
+        }
+      }
+    ]
+  },
+  "dataModel": {
+    "version": "3.0.0",
+    "graphSchemaRepresentation": {
+      "version": "1.0.0",
+      "graphSchema": {
+        "nodeLabels": [
+          {
+            "$id": "nl:1",
+            "token": "Artifact",
+            "properties": [
+              {
+                "$id": "p:1",
+                "token": "Artifact",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "nl:2",
+            "token": "Artist",
+            "properties": [
+              {
+                "$id": "p:2",
+                "token": "Artist",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "nl:3",
+            "token": "Era",
+            "properties": [
+              {
+                "$id": "p:3",
+                "token": "Era",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "nl:4",
+            "token": "Culture",
+            "properties": [
+              {
+                "$id": "p:4",
+                "token": "Culture",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "nl:5",
+            "token": "Department",
+            "properties": [
+              {
+                "$id": "p:5",
+                "token": "Department",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          }
+        ],
+        "relationshipTypes": [
+          {
+            "$id": "rt:1",
+            "token": "CREATED_BY",
+            "properties": []
+          },
+          {
+            "$id": "rt:2",
+            "token": "BELONGS_TO_ERA",
+            "properties": []
+          },
+          {
+            "$id": "rt:3",
+            "token": "ORIGINATED_FROM",
+            "properties": []
+          },
+          {
+            "$id": "rt:4",
+            "token": "EXHIBITED_IN",
+            "properties": []
+          }
+        ],
+        "nodeObjectTypes": [
+          {
+            "$id": "n:1",
+            "labels": [
+              {
+                "$ref": "#nl:1"
+              }
+            ]
+          },
+          {
+            "$id": "n:2",
+            "labels": [
+              {
+                "$ref": "#nl:2"
+              }
+            ]
+          },
+          {
+            "$id": "n:3",
+            "labels": [
+              {
+                "$ref": "#nl:3"
+              }
+            ]
+          },
+          {
+            "$id": "n:4",
+            "labels": [
+              {
+                "$ref": "#nl:4"
+              }
+            ]
+          },
+          {
+            "$id": "n:5",
+            "labels": [
+              {
+                "$ref": "#nl:5"
+              }
+            ]
+          }
+        ],
+        "relationshipObjectTypes": [
+          {
+            "$id": "r:1",
+            "type": {
+              "$ref": "#rt:1"
+            },
+            "from": {
+              "$ref": "#n:1"
+            },
+            "to": {
+              "$ref": "#n:2"
+            }
+          },
+          {
+            "$id": "r:2",
+            "type": {
+              "$ref": "#rt:2"
+            },
+            "from": {
+              "$ref": "#n:1"
+            },
+            "to": {
+              "$ref": "#n:3"
+            }
+          },
+          {
+            "$id": "r:3",
+            "type": {
+              "$ref": "#rt:3"
+            },
+            "from": {
+              "$ref": "#n:1"
+            },
+            "to": {
+              "$ref": "#n:4"
+            }
+          },
+          {
+            "$id": "r:4",
+            "type": {
+              "$ref": "#rt:4"
+            },
+            "from": {
+              "$ref": "#n:1"
+            },
+            "to": {
+              "$ref": "#n:5"
+            }
+          }
+        ],
+        "constraints": [
+          {
+            "$id": "c:3",
+            "name": "Era_Era_key",
+            "constraintType": "key",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:3"
+            },
+            "properties": [
+              {
+                "$ref": "#p:3"
+              }
+            ]
+          },
+          {
+            "$id": "c:2",
+            "name": "Artist_Artist_key",
+            "constraintType": "key",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:2"
+            },
+            "properties": [
+              {
+                "$ref": "#p:2"
+              }
+            ]
+          },
+          {
+            "$id": "c:5",
+            "name": "Department_Department_key",
+            "constraintType": "key",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:5"
+            },
+            "properties": [
+              {
+                "$ref": "#p:5"
+              }
+            ]
+          },
+          {
+            "$id": "c:4",
+            "name": "Culture_Culture_key",
+            "constraintType": "key",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:4"
+            },
+            "properties": [
+              {
+                "$ref": "#p:4"
+              }
+            ]
+          },
+          {
+            "$id": "c:1",
+            "name": "Artifact_Artifact_key",
+            "constraintType": "key",
+            "entityType": "node",
+            "nodeLabel": {
+              "$ref": "#nl:1"
+            },
+            "properties": [
+              {
+                "$ref": "#p:1"
+              }
+            ]
+          }
+        ],
+        "indexes": []
+      }
+    },
+    "graphSchemaExtensionsRepresentation": {
+      "nodeKeyProperties": [
+        {
+          "node": {
+            "$ref": "#n:1"
+          },
+          "keyProperties": [
+            {
+              "$ref": "#p:1"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:2"
+          },
+          "keyProperties": [
+            {
+              "$ref": "#p:2"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:3"
+          },
+          "keyProperties": [
+            {
+              "$ref": "#p:3"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:4"
+          },
+          "keyProperties": [
+            {
+              "$ref": "#p:4"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:5"
+          },
+          "keyProperties": [
+            {
+              "$ref": "#p:5"
+            }
+          ]
+        }
+      ],
+      "relationshipKeyProperties": []
+    },
+    "graphMappingRepresentation": {
+      "dataSourceSchema": {
+        "type": "local",
+        "tableSchemas": [
+          {
+            "name": "cleaned_met_artifacts(1).csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "object_id",
+                "sample": "1",
+                "recommendedType": {
+                  "type": "integer"
+                }
+              },
+              {
+                "name": "title",
+                "sample": "One-dollar Liberty Head Coin",
+                "recommendedType": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "object_date",
+                "sample": "1853",
+                "recommendedType": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "artist_name",
+                "sample": "James Barton Longacre",
+                "recommendedType": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "artist_role",
+                "sample": "Maker",
+                "recommendedType": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "artist_nationality",
+                "sample": "American",
+                "recommendedType": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "period",
+                "sample": "Unspecified Period",
+                "recommendedType": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "dynasty",
+                "sample": "Unspecified Dynasty",
+                "recommendedType": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "culture",
+                "sample": "Unknown Culture",
+                "recommendedType": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "country",
+                "sample": "Unknown Country",
+                "recommendedType": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "department",
+                "sample": "American Decorative Arts",
+                "recommendedType": {
+                  "type": "string"
+                }
+              },
+              {
+                "name": "medium",
+                "sample": "Gold",
+                "recommendedType": {
+                  "type": "string"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "nodeMappings": [
+        {
+          "node": {
+            "$ref": "#n:1"
+          },
+          "tableName": "cleaned_met_artifacts(1).csv",
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:1"
+              },
+              "fieldName": "title"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:2"
+          },
+          "tableName": "cleaned_met_artifacts(1).csv",
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:2"
+              },
+              "fieldName": "artist_name"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:3"
+          },
+          "tableName": "cleaned_met_artifacts(1).csv",
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:3"
+              },
+              "fieldName": "period"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:4"
+          },
+          "tableName": "cleaned_met_artifacts(1).csv",
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:4"
+              },
+              "fieldName": "culture"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:5"
+          },
+          "tableName": "cleaned_met_artifacts(1).csv",
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:5"
+              },
+              "fieldName": "department"
+            }
+          ]
+        }
+      ],
+      "relationshipMappings": [
+        {
+          "relationship": {
+            "$ref": "#r:1"
+          },
+          "tableName": "cleaned_met_artifacts(1).csv",
+          "propertyMappings": [],
+          "fromMappings": {
+            "#p:1": "title"
+          },
+          "toMappings": {
+            "#p:2": "artist_name"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:2"
+          },
+          "tableName": "cleaned_met_artifacts(1).csv",
+          "propertyMappings": [],
+          "fromMappings": {
+            "#p:1": "title"
+          },
+          "toMappings": {
+            "#p:3": "period"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:3"
+          },
+          "tableName": "cleaned_met_artifacts(1).csv",
+          "propertyMappings": [],
+          "fromMappings": {
+            "#p:1": "title"
+          },
+          "toMappings": {
+            "#p:4": "culture"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:4"
+          },
+          "tableName": "cleaned_met_artifacts(1).csv",
+          "propertyMappings": [],
+          "fromMappings": {
+            "#p:1": "title"
+          },
+          "toMappings": {
+            "#p:5": "department"
+          }
+        }
+      ]
+    },
+    "configurations": {
+      "idsToIgnore": [],
+      "arrayDelimiter": "|",
+      "vectorDelimiter": "|"
+    }
+  }
+}
